@@ -1,4 +1,3 @@
-
 export default {
   /*
   ** Nuxt rendering mode
@@ -17,8 +16,12 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }      
+    ],
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' },
+      { src: 'https://kit.fontawesome.com/f8caf9737e.js'}
+    ],
   },
   /*
   ** Global CSS
@@ -29,7 +32,8 @@ export default {
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
-  plugins: [
+  plugins: [    
+    {src: '~/plugins/vue-typer.js', ssr: false},    
   ],
   /*
   ** Nuxt.js dev-modules
@@ -55,5 +59,8 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  env: {
+    apiUrl: "http://147.139.177.164:3018"
   }
 }

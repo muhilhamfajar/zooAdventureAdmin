@@ -19,11 +19,11 @@
     </aside>
 
     <div class="w-full flex flex-col h-screen overflow-y-hidden">
-      <header class="w-full flex items-center bg-white py-2 px-6 hidden sm:flex">
+      <header class="w-full flex items-center bg-white border-b border-gray-600 py-2 px-6 hidden sm:flex">
         <div class="w-1/2"></div>
         <div class="relative w-1/2 flex justify-end">
           <button      
-            class="realtive z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none"
+            class="realtive w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none"
           >
             <img src="https://source.unsplash.com/uJ8LNVCBjFQ/400x400" />
           </button>          
