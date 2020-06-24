@@ -11,8 +11,8 @@
           <tr v-for="(item, index) in items" :key="index">
               <td v-for="(column, indexColumn) in columns" :key="indexColumn">{{item[column.name]}}</td>              
               <td v-if="actions">
-                <span v-if="actions.edit" class="cursor-pointer"><i class="fas fa-edit"></i></span>
-                <span v-if="actions.delete" class="cursor-pointer"><i class="fas fa-trash ml-3 text-red-700"></i></span>
+                <span v-if="actions.edit" @click="$emit('edit', item.user_id)" class="cursor-pointer"><i class="fas fa-edit"></i></span>
+                <span v-if="actions.delete" @click="$emit('delete', item.user_id)" class="cursor-pointer"><i class="fas fa-trash ml-3 text-red-700"></i></span>
               </td>
           </tr>
       </tbody>
